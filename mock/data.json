@@ -1,7 +1,7 @@
 [
     {
-        "image": "./static/source/song_1.jpg",
-        "audio": "./static/song_1.mp3",
+        "image": "./source/song_1.jpg",
+        "audio": "./source/song_1.mp3",
         "song": "蔷薇",
         "album": "蔷薇",
         "singer": "蔡佳淳",
