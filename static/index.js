@@ -10580,7 +10580,8 @@ return jQuery;
 // 数据接口地址
 
 var root = window.player;
-var dataUrl = '../mock/data.json';
+// var dataUrl = '../mock/data.json';
+var dataUrl = 'https://github.com/milliennium/music-player/blob/master/mock/data.json';
 // 作用域
 var $scope = $(document.body);
 // loading 浮层
