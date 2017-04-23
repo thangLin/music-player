@@ -9,8 +9,8 @@
         "isLike": false
     },
     {
-        "image": "../source/song_2.jpg",
-        "audio": "../source/song_2.mp3",
+        "image": "./source/song_2.jpg",
+        "audio": "./source/song_2.mp3",
         "song": "听",
         "album": "美人制造",
         "singer": "张杰",
@@ -18,8 +18,8 @@
         "isLike": false
     },
     {
-        "image": "../source/song_3.jpg",
-        "audio": "../source/song_3.mp3",
+        "image": "./source/song_3.jpg",
+        "audio": "./source/song_3.mp3",
         "song": "站台",
         "album": "传世乐章",
         "singer": "汪苏泷",
