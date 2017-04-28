@@ -55,12 +55,24 @@ body {
 
 /* 歌曲封面样式 */
 .song-img {
-  width: 50%;
+  width: 65%;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 65%;
   position: relative;
-  background-color: #ccc;
-  margin: 0 auto 30px; }
+ 
+  margin: 0 auto 30px; 
+  }
+  @keyframes move {
+    0% {
+      transform : rotatez(0deg);
+    }
+    100% {
+      transform : rotatez(360deg);
+    }
+  }
+  .movepic {
+    animation:move 45s linear infinite;
+  }
   .song-img .img-wrap {
     position: absolute;
     top: 0;
@@ -73,7 +85,9 @@ body {
       display: block;
       width: 100%;
       height: 100%;
-      border: none; }
+      border: none;
+      border-radius: 50%;   
+    }
 
 /* 歌曲信息样式 */
 .song-info {

@@ -17,6 +17,7 @@ var render = root.render,
     processor = root.processor;
 
 $scope.on('player:change', function (e, index) {
+    $('.song-img div').removeClass('movepic');
     var curData = songListData[index],
         status = audioPlayer.getPlayerStatus();
 
@@ -24,10 +25,14 @@ $scope.on('player:change', function (e, index) {
     processor.render(curData.duration);
     audioPlayer.setAudioSource(curData.audio);
 
-    if (status === 'play') {
-        audioPlayer.play();
-        processor.start(0);
-    }
+    var timer = setTimeout(function () {
+        if (status === 'play') {
+            audioPlayer.play();
+            processor.start(0);
+        }
+    }, 5)
+
+   
 });
 
 $scope.on('player:jump', function (e, percentage) {
@@ -81,17 +86,21 @@ function bindBtn() {
         $(this).toggleClass('playing');
         if ($(this).hasClass('playing')) {
             processor.start();
+            $('.song-img .img-wrap').css('animation-play-state','running');
         } else {
             processor.stop();
+             $('.song-img .img-wrap').css('animation-play-state','paused');
         }
     });
     $scope.on('click', '.prev-btn', function () {
         var index = controller.prev();
         $scope.trigger('player:change', index);
+        
     });
     $scope.on('click', '.next-btn', function () {
         var index = controller.next();
         $scope.trigger('player:change', index);
+        
     });
     // 播放列表先不做
     /*$scope.on('click', '.list-btn', function () {
@@ -143,3 +152,12 @@ function getData(url, cb) {
 }
 
 getData(dataUrl, success);
+var judgeplaying = function () {
+    var frameId;
+    if ($('.play-btn').hasClass('playing')) {
+        $('.song-img .img-wrap').addClass('movepic');
+         frameId = requestAnimationFrame('judgeplaying');
+    }
+    console.log('frame')
+}
+judgeplaying();

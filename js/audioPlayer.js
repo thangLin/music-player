@@ -37,6 +37,8 @@
         play: function () {
             this.audio.play();
             this.status = 'play';
+            $('.song-img .img-wrap').addClass('movepic');
+            $('.song-img .img-wrap').css('animation-play-state','running');
         },
         // 设置 Audio
         setAudioSource: function (src) {
