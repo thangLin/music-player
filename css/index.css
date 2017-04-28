@@ -91,7 +91,7 @@ body {
 
 /* 歌曲信息样式 */
 .song-info {
-  height: 120px;
+  height: 110px;
   text-align: center; }
   .song-info h1 {
     overflow: hidden;
